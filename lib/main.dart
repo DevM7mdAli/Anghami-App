@@ -53,7 +53,7 @@ class Picture extends StatelessWidget {
                           color: Colors.white),
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 15,
                     ),
                   ],
                 ),
@@ -75,7 +75,7 @@ class MainPlace extends StatelessWidget {
     Color? icoColor,
   }) {
     return Container(
-      height: 75,
+      height: 60,
       margin: const EdgeInsets.all(8),
       child: ElevatedButton(
         onPressed: () {

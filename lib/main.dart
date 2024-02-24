@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -48,8 +47,10 @@ class Picture extends StatelessWidget {
                     ),
                     Text(
                       "Welcome To Angham",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w800 , color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white),
                     ),
                     SizedBox(
                       height: 50,
@@ -69,7 +70,10 @@ class Picture extends StatelessWidget {
 class MainPlace extends StatelessWidget {
   const MainPlace({super.key});
 
-  Widget newPodcast({String ?nameOfSound , Color ?icoColor,}) {
+  Widget newPodcast({
+    String? nameOfSound,
+    Color? icoColor,
+  }) {
     return Container(
       height: 75,
       margin: const EdgeInsets.all(8),
@@ -78,12 +82,17 @@ class MainPlace extends StatelessWidget {
           final player = AudioPlayer();
           player.play(AssetSource("$nameOfSound.mp3"));
         },
-        child:  Row(
+        child: Row(
           children: [
-            Icon(Icons.music_note,
-            color: icoColor,),
+            Icon(
+              Icons.music_note,
+              color: icoColor,
+            ),
             const SizedBox(width: 10),
-            Text(nameOfSound!,style: TextStyle(color: icoColor ,fontSize: 22),)
+            Text(
+              nameOfSound!,
+              style: TextStyle(color: icoColor, fontSize: 22),
+            )
           ],
         ),
       ),
@@ -94,13 +103,13 @@ class MainPlace extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        newPodcast(nameOfSound: "giver" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "insecure" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "many" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "mean" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "mind" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "Pro" , icoColor: Colors.red),
-        newPodcast(nameOfSound: "trap" , icoColor: Colors.red),
+        newPodcast(nameOfSound: "giver", icoColor: Colors.red),
+        newPodcast(nameOfSound: "insecure", icoColor: Colors.red),
+        newPodcast(nameOfSound: "many", icoColor: Colors.red),
+        newPodcast(nameOfSound: "mean", icoColor: Colors.red),
+        newPodcast(nameOfSound: "mind", icoColor: Colors.red),
+        newPodcast(nameOfSound: "Pro", icoColor: Colors.red),
+        newPodcast(nameOfSound: "trap", icoColor: Colors.red),
       ],
     );
   }

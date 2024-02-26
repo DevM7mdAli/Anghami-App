@@ -80,7 +80,7 @@ class MainPlace extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {
           final player = AudioPlayer();
-          player.play(AssetSource("$nameOfSound.mp3"));
+          player.play(AssetSource("$nameOfSound.wav"));
         },
         child: Row(
           children: [
@@ -103,13 +103,21 @@ class MainPlace extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        newPodcast(nameOfSound: "giver", icoColor: Colors.red),
-        newPodcast(nameOfSound: "insecure", icoColor: Colors.red),
-        newPodcast(nameOfSound: "many", icoColor: Colors.red),
-        newPodcast(nameOfSound: "mean", icoColor: Colors.red),
-        newPodcast(nameOfSound: "mind", icoColor: Colors.red),
-        newPodcast(nameOfSound: "Pro", icoColor: Colors.red),
-        newPodcast(nameOfSound: "trap", icoColor: Colors.red),
+        newPodcast(
+            nameOfSound: "classic alarm",
+            icoColor: const Color.fromARGB(255, 66, 94, 119)),
+        newPodcast(
+            nameOfSound: "dog barking",
+            icoColor: const Color.fromARGB(255, 66, 94, 119)),
+        newPodcast(
+            nameOfSound: "retro game",
+            icoColor: const Color.fromARGB(255, 66, 94, 119)),
+        newPodcast(
+            nameOfSound: "rocket whoosh",
+            icoColor: const Color.fromARGB(255, 66, 94, 119)),
+        newPodcast(
+            nameOfSound: "sweep transition",
+            icoColor: const Color.fromARGB(255, 66, 94, 119)),
       ],
     );
   }
